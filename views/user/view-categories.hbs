@@ -1,0 +1,24 @@
+ 
+ 
+<section style="background-color: #152733">
+    <div class="container">
+    <div class="row">
+        {{#each categories}}
+
+        <div class="col-mid-3 p-3">
+
+            <div class="card" style="width: 15rem;height: 22rem">
+                <img src="/category-images/{{this._id}}.jpg" class="card-img-top" style="height: 12rem;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.Name}}</h5>
+                    <p class="card-text">{{this.Department}}</p>
+                    
+                    <a href="/book-appointment/{{this._id}}" class="btn btn-primary">Book Appointment</a>
+                    </div>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+    </div>
+</section>

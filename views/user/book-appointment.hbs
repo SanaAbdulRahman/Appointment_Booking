@@ -1,0 +1,88 @@
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+ <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Book your Appointment</h3>
+                        {{!-- <p>Fill in the data below.</p> --}}
+                        {{!-- <form class="requires-validation" novalidate> --}}
+                            <form action="" enctype="multipart/form-data">
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="Name" value="{{category.Name}}" required>
+                               <div class="valid-feedback">Username field is valid!</div>
+                               <div class="invalid-feedback">Username field cannot be blank!</div>
+                            </div>
+
+                            {{!-- <div class="col-md-12 mt-2"> --}}
+                                {{!-- <input class="form-control" type="email" name="email" placeholder="E-mail Address" required> --}}
+                                 {{!-- <input type="file" name="Image" class="form-control">
+                            </div> --}}
+
+                           {{!-- <div class="col-md-12">
+                                <select class="form-select mt-3" required>
+                                      <option selected disabled value="">Position</option>
+                                      <option value="jweb">Junior Web Developer</option>
+                                      <option value="sweb">Senior Web Developer</option>
+                                      <option value="pmanager">Project Manager</option>
+                               </select>
+                                <div class="valid-feedback">You selected a position!</div>
+                                <div class="invalid-feedback">Please select a position!</div>
+                           </div> --}}
+
+
+                           <div class="col-md-12">
+                              <input class="form-control" type="text" name="Department" value="{{category.Department}}" required>
+                               
+                           </div>
+
+
+                           <div class="col-md-12 mt-3">
+                            <label class="mb-3 mr-1" for="">Doctor Available from  {{category.FromDate}} to {{category.ToDate}}
+                            {{!-- <br>From :  --}}<br>Select a date :
+                            <input type="date" id="date" name="FromDate" value="{{category.FromDate}}" min="{{category.FromDate}}" max="{{category.ToDate}}">
+                             {{!-- To : </label>
+                            <input type="date" id="date" name="ToDate" value="{{category.ToDate}}" min="2022-01-06" max="2022-12-31"> --}}
+                        </div>
+                       
+
+                       <div class="col-md-12 ">
+                            
+                          
+                          <label class="mb-3 mr-1" for="">Doctor Available at:  
+                                {{category.FromTime}} to {{category.ToTime}}
+                            <br>Select a time: 
+                            <input type="time" id="time" name="FromTime" value="{{category.FromTime}}" min="{{category.FromTime}}" max="{{category.ToTime}}">
+                             {{!-- To : </label>
+                            <input type="time" id="time" name="ToTime" value="{{category.ToTime}}"> --}}
+                          
+
+                        </div>
+
+                       
+                            
+                            
+                            
+                            <div class="form-button ">
+                                 {{!-- <button type="submit" class="btn btn-success mt-4 ml-5"
+                                style="width: 200px;">Submit</button> --}}
+ <button id="submit" type="submit" onclick="show()" class="btn btn-primary mt-4 ml-5" style="width: 350px;">Confirm</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+
+</div>
+</div>
+<script src="/public/javascripts/script.js"></script>
+
+<script>
+    function show()
+    {
+        alert("Your appointment confirmed successfully");
+    }
+    
+</script>

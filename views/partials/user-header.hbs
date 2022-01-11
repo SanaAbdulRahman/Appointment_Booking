@@ -1,0 +1,30 @@
+<header>
+   <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    {{!-- <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> --}}
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBe3cCN9oo08qW-UlHa2zo_XAceQw4JZTf_A&usqp=CAU" style="width: 150px;height:50px" class="ml-5" >
+ {{!-- Book your Appointments --}}
+  </a>  
+
+  <div >
+    
+    
+      {{#if user}}
+       <label style="text-align: right"> Hi, {{user.Name}}
+      </label><br>
+   <a href="/logout">Log Out</a>
+       
+        {{/if}}
+      
+  
+  {{!-- <div>
+    {{#if !user}}
+    <a href="/" style="visibility: hidden;">Log Out</a>
+    {{else}}
+     
+     {{/if}}
+  </div> --}}
+  </div>
+</nav>
+</header>

@@ -1,0 +1,47 @@
+
+
+<section>
+    <div class="container">
+        <div class="row mt-4">
+            <a href="/admin/add-category" class="btn btn-success ml-auto">Add Category</a>
+        </div>
+        <table class="table mt-5" id="categoriesTable">
+  <thead>
+    <tr style="text-decoration: white;">
+      
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Department</th>
+      <th scope="col">Date : From</th>
+      <th scope="col"> To</th>
+      <th scope="col">Time : From</th>
+      <th scope="col"> To</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each categories}}
+    <tr>
+     
+      <td>{{this.Name}}</td>
+      <td><img style="width: 50px;height:50px" src="/category-images/{{this._id}}.jpg"</td>
+      <td>{{this.Department}}</td>
+        <td>{{this.FromDate}}</td>
+        <td>{{this.ToDate}}</td>
+        <td>{{this.FromTime}}</td>
+         <td>{{this.ToTime}}</td>
+         <td><a href="/admin/edit-category/{{this._id}}"><img src="https://img.icons8.com/metro/26/000000/edit.png"/></a>
+         <a href="/admin/delete-category/{{this._id}}" onclick="return confirm('Do you really want to delete {{this.Name}} ?')"><img src="https://img.icons8.com/small/32/000000/filled-trash.png"/></a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+</section>
+
+
+<script>
+$(function () {
+    $('#categoriesTable').DataTable();
+} );
+</script>
